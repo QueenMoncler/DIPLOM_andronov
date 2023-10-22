@@ -18,14 +18,14 @@ namespace DIPLOMandronov
         public NpgsqlDataAdapter adapter = new NpgsqlDataAdapter();
 
 
-        private void openConnection()
+        public void openConnection()
         {
             if (vConnection.State == System.Data.ConnectionState.Open)
             {
                 vConnection.Close();
             }
         }
-        private void closeConnection()
+        public void closeConnection()
         {
             if (vConnection.State == System.Data.ConnectionState.Closed)
             {

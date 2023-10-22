@@ -11,8 +11,8 @@ namespace DIPLOMandronov
         public Boolean getBool(String lvlUser, String nickname, String password)
         {
             DB db = new DB();
-           
 
+            db.openConnection();
             if (lvlUser == "Администратор")
             {
                 String query = "SELECT * FROM user_admin WHERE nickname = '" + nickname + "' AND password = '" + password + "'";
@@ -37,6 +37,7 @@ namespace DIPLOMandronov
                 db.adapter.Fill(db.table);
                 if (db.table.Rows.Count > 0) return true;
             }
+            db.closeConnection();
             return false;
         }
 

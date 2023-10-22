@@ -1,4 +1,5 @@
-﻿using Npgsql;
+﻿using DIPLOMandronov.admin;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +38,10 @@ namespace DIPLOMandronov
                 }
                 else if(user.getBool(lvl, login, password))
                 {
-                    MessageBox.Show("Выполнено успешно!");
+                //MessageBox.Show("Выполнено успешно!");
+                    this.Hide();
+                    Admin admin = new Admin();
+                    admin.Show();
                 }
                 else
                 {
