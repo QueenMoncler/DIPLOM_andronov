@@ -30,7 +30,7 @@ namespace DIPLOMandronov
             String lvl = comboBox1.Text;
             
             User user = new User();
-
+         
            
                 if (lvl == null || lvl == "" || login == "" || password == "")
                 {
@@ -48,13 +48,18 @@ namespace DIPLOMandronov
                     MessageBox.Show("Неверный логин или пароль");
                 }
           
-
+            
           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

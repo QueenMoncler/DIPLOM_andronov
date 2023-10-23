@@ -19,13 +19,18 @@ namespace DIPLOMandronov.admin
 
         private void admin_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void btnAddCar_Click(object sender, EventArgs e)
         {
             AddCar addCar = new AddCar();
             addCar.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace DIPLOMandronov
     {
         static String vStrConnection = "Server=localhost; port=1625; user id=postgres; password=2402; database=DiplomAndronov ;";
         NpgsqlConnection vConnection = new NpgsqlConnection(vStrConnection);
-        NpgsqlCommand vCommand;
+  
         
         public DataTable table = new DataTable();
         public NpgsqlDataAdapter adapter = new NpgsqlDataAdapter();
