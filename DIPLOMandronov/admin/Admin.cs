@@ -32,5 +32,12 @@ namespace DIPLOMandronov.admin
         {
             this.Close();
         }
+
+        private void buttonViewCar_Click(object sender, EventArgs e)
+        {
+            
+            carView carView = new carView();
+            carView.Show();
+        }
     }
 }

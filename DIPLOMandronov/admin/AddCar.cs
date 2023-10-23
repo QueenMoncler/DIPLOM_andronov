@@ -31,30 +31,30 @@ namespace DIPLOMandronov.admin
             String year = textBoxYear.Text;
             String gosNum = textBoxGosNum.Text;
 
-            String query = "INSERT INTO car(kyzov, marka, model, year, gos_num) VALUES('Седан', 'HUYNDAI', 'Solaris', '2012','Н234ПП');";
+            String query = $"INSERT INTO car(kyzov, marka, model, year, gos_num) VALUES('{kyzov}', '{marka}', '{model}', '{year}','{gosNum}');";
+            string vStrConnection = "Server=localhost; port=1625; user id=postgres; password=2402; database=DiplomAndronov ;";
 
 
             DB dB = new DB();
-            NpgsqlCommand command = new NpgsqlCommand(query, dB.getConnection());
 
-            dB.openConnection();
-            command.ExecuteNonQuery();
+            NpgsqlConnection connection = new NpgsqlConnection(vStrConnection);
+            NpgsqlCommand command = new NpgsqlCommand(query, connection);
 
-            /*
+            connection.Open();
             if (command.ExecuteNonQuery() == 1)
             {
                 MessageBox.Show("Автомобиль успешно добавлен!");
-                comboBoxTypeKyzov.Text = null;
-                comboBoxMarka.Text = null;
+                comboBoxTypeKyzov.Text = "Тип кузова";
+                comboBoxMarka.Text = "Марка";
                 textBoxModel.Text = null;
                 textBoxYear.Text = null;
                 textBoxGosNum.Text = null;
             }
             else
                 MessageBox.Show("Ошибка");
-            */
+            
 
-            dB.closeConnection();
+            connection.Close();
         }
     }
 }

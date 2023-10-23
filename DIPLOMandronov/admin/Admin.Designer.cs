@@ -32,27 +32,29 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddCar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonViewCar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonViewCar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnAddCar);
             this.panel1.Location = new System.Drawing.Point(83, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 132);
+            this.panel1.Size = new System.Drawing.Size(432, 132);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(60, 27);
+            this.label1.Location = new System.Drawing.Point(147, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 29);
+            this.label1.Size = new System.Drawing.Size(156, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Автомобиль";
+            this.label1.Text = "Автомобили";
             // 
             // btnAddCar
             // 
@@ -74,6 +76,17 @@
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonViewCar
+            // 
+            this.buttonViewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonViewCar.Location = new System.Drawing.Point(220, 76);
+            this.buttonViewCar.Name = "buttonViewCar";
+            this.buttonViewCar.Size = new System.Drawing.Size(160, 43);
+            this.buttonViewCar.TabIndex = 2;
+            this.buttonViewCar.Text = "Смотреть";
+            this.buttonViewCar.UseVisualStyleBackColor = true;
+            this.buttonViewCar.Click += new System.EventHandler(this.buttonViewCar_Click);
             // 
             // Admin
             // 
@@ -97,5 +110,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddCar;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonViewCar;
     }
 }
