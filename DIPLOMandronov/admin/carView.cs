@@ -20,7 +20,39 @@ namespace DIPLOMandronov.admin
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                if(e.ColumnIndex == 7)
+                {
+                    string task = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    
+                    if(task == "delete")
+                    {
+                        if(MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+                            dataGridView1.Rows.RemoveAt(rowIndex);
+                        }
+                    }
+                }
+                if (e.ColumnIndex == 8)
+                {
+                    string task = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
 
+                    if (task == "update")
+                    {
+                        if (MessageBox.Show("Отправить авто на ремонт?", "Ремонт", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            int rowIndex = e.RowIndex;
+                            dataGridView1.Rows.RemoveAt(rowIndex);
+                        }
+                    }
+                }
+            }
+            catch(Exception exception)
+            {
+                MessageBox.Show("Error");
+            }
         }
 
         private void LoadData()
@@ -56,6 +88,12 @@ namespace DIPLOMandronov.admin
         {
 
             LoadData();
+        }
+
+        private void buttoтDeleteCar_Click(object sender, EventArgs e)
+        {
+            
+
         }
     }
 }
