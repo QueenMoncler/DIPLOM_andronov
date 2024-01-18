@@ -30,8 +30,10 @@ namespace DIPLOMandronov.admin
                     {
                         if(MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
-                            int rowIndex = e.RowIndex;
-                            dataGridView1.Rows.RemoveAt(rowIndex);
+                            //int rowIndex = e.RowIndex;
+                            //DataGridViewSelectedRowCollection selectedRows = dataGridView1.SelectedRows;
+                           // string model = (string)selectedRows[rowIndex].Cells[2].Value;
+                            //dataGridView1.Rows.RemoveAt(rowIndex);
                         }
                     }
                 }

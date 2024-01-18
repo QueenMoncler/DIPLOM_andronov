@@ -43,17 +43,19 @@
             this.panel1.Controls.Add(this.buttonViewCar);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnAddCar);
-            this.panel1.Location = new System.Drawing.Point(12, 26);
+            this.panel1.Location = new System.Drawing.Point(14, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 132);
+            this.panel1.Size = new System.Drawing.Size(486, 165);
             this.panel1.TabIndex = 0;
             // 
             // buttonViewCar
             // 
             this.buttonViewCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonViewCar.Location = new System.Drawing.Point(220, 76);
+            this.buttonViewCar.Location = new System.Drawing.Point(248, 95);
+            this.buttonViewCar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonViewCar.Name = "buttonViewCar";
-            this.buttonViewCar.Size = new System.Drawing.Size(160, 43);
+            this.buttonViewCar.Size = new System.Drawing.Size(180, 54);
             this.buttonViewCar.TabIndex = 2;
             this.buttonViewCar.Text = "Обновить";
             this.buttonViewCar.UseVisualStyleBackColor = true;
@@ -63,18 +65,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(147, 23);
+            this.label1.Location = new System.Drawing.Point(165, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 29);
+            this.label1.Size = new System.Drawing.Size(177, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Автомобили";
             // 
             // btnAddCar
             // 
             this.btnAddCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddCar.Location = new System.Drawing.Point(54, 76);
+            this.btnAddCar.Location = new System.Drawing.Point(61, 95);
+            this.btnAddCar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddCar.Name = "btnAddCar";
-            this.btnAddCar.Size = new System.Drawing.Size(160, 43);
+            this.btnAddCar.Size = new System.Drawing.Size(180, 54);
             this.btnAddCar.TabIndex = 0;
             this.btnAddCar.Text = "Добавить";
             this.btnAddCar.UseVisualStyleBackColor = true;
@@ -82,9 +85,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1027, 26);
+            this.button1.Location = new System.Drawing.Point(1155, 32);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(84, 29);
             this.button1.TabIndex = 1;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
@@ -93,22 +97,24 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 187);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 234);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1090, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(1226, 430);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 759);
+            this.ClientSize = new System.Drawing.Size(1253, 949);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Admin";
             this.Text = "admin";
             this.Load += new System.EventHandler(this.admin_Load);

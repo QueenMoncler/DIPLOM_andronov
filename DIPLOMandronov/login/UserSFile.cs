@@ -31,6 +31,7 @@ namespace DIPLOMandronov
                 db.adapter.Fill(db.table);
                 if (db.table.Rows.Count > 0)
                 {
+                    Console.WriteLine(db.table);
                    db.closeConnection();
                    return true;
                 }
@@ -45,7 +46,7 @@ namespace DIPLOMandronov
                 NpgsqlConnection connection = new NpgsqlConnection(vStrConnection);
                 //MessageBox.Show($"SELECT (password = crypt('{password}', password)) AS password FROM user_admin where nickname = '{nickname} '");
                 //String query = $"INSERT INTO user_rabotnik(nickname, password) VALUES ('{nickname}', '{md5.hashPassword(password)}');";
-                String query = $"SELECT * FROM user_admin WHERE nickname = '{nickname}' AND password = '{md5.hashPassword(password)}'";
+                String query = $"SELECT * FROM user_rabotnik WHERE nickname = '{nickname}' AND password = '{md5.hashPassword(password)}'";
                  //String query = $"SELECT (password = crypt('{password}', password)) AS password FROM user_admin where nickname = '{nickname} '";
                 NpgsqlCommand command = new NpgsqlCommand(query, connection);
                 connection.Open();

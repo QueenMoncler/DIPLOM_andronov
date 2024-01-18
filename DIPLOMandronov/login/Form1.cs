@@ -40,8 +40,9 @@ namespace DIPLOMandronov
                 {
                 //MessageBox.Show("Выполнено успешно!");
                     this.Hide();
+                Main mainAdmin = new Main();
                     Admin admin = new Admin();
-                    admin.Show();
+                mainAdmin.Show();
                 }
                 else
                 {

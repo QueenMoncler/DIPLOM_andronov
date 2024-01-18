@@ -100,6 +100,18 @@
     <Compile Include="admin\AddCar.Designer.cs">
       <DependentUpon>AddCar.cs</DependentUpon>
     </Compile>
+    <Compile Include="admin\AddNewCar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\AddNewCar.Designer.cs">
+      <DependentUpon>AddNewCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AddRabotnik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\AddRabotnik.Designer.cs">
+      <DependentUpon>AddRabotnik.cs</DependentUpon>
+    </Compile>
     <Compile Include="admin\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,25 @@
     </Compile>
     <Compile Include="admin\carView.Designer.cs">
       <DependentUpon>carView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\DataGridDBView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\DataGridDBView.Designer.cs">
+      <DependentUpon>DataGridDBView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\DeleteCar.cs" />
+    <Compile Include="admin\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin\TableDBView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="admin\TableDBView.Designer.cs">
+      <DependentUpon>TableDBView.cs</DependentUpon>
     </Compile>
     <Compile Include="Database\DB.cs" />
     <Compile Include="login\Form1.cs">
@@ -126,11 +157,26 @@
     <EmbeddedResource Include="admin\AddCar.resx">
       <DependentUpon>AddCar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="admin\AddNewCar.resx">
+      <DependentUpon>AddNewCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\AddRabotnik.resx">
+      <DependentUpon>AddRabotnik.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="admin\Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="admin\carView.resx">
       <DependentUpon>carView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\DataGridDBView.resx">
+      <DependentUpon>DataGridDBView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin\TableDBView.resx">
+      <DependentUpon>TableDBView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

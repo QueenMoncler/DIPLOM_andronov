@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DIPLOMandronov.admin
 {
@@ -16,6 +17,7 @@ namespace DIPLOMandronov.admin
         public Admin()
         {
             InitializeComponent();
+            LoadData();
         }
 
         private void admin_Load(object sender, EventArgs e)
@@ -50,22 +52,27 @@ namespace DIPLOMandronov.admin
         {
             try
             {
-                if (e.ColumnIndex == 7)
+                if (e.ColumnIndex == 9)
                 {
-                    string task = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                    string task = dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
 
                     if (task == "delete")
                     {
                         if (MessageBox.Show("Удалить эту строку?", "Удаление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             int rowIndex = e.RowIndex;
-                            dataGridView1.Rows.RemoveAt(rowIndex);
+                            string cellValue = dataGridView1[0, rowIndex].Value.ToString();
+                         
+
+                            DeleteCar deleteCar = new DeleteCar();
+                            if (deleteCar.delete(Int32.Parse(cellValue))) dataGridView1.Rows.RemoveAt(rowIndex);
+
                         }
                     }
                 }
-                if (e.ColumnIndex == 8)
+                if (e.ColumnIndex == 10)
                 {
-                    string task = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                    string task = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
 
                     if (task == "update")
                     {
@@ -88,21 +95,21 @@ namespace DIPLOMandronov.admin
             try
             {
                 string vStrConnection = "Server=localhost; port=1625; user id=postgres; password=2402; database=DiplomAndronov ;";
-                string query = "select *, 'delete' AS delete, 'update' AS update from car";
+                string query = "select *, 'delete' AS delete, 'update' AS update from car_admin";
                 NpgsqlConnection connection = new NpgsqlConnection(vStrConnection);
                 NpgsqlCommand command = new NpgsqlCommand(query, connection);
                 connection.Open();
                 NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(command);
                 adapter.SelectCommand = command;
                 DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet, "car");
-                dataGridView1.DataSource = dataSet.Tables["car"];
+                adapter.Fill(dataSet, "car_admin");
+                dataGridView1.DataSource = dataSet.Tables["car_admin"];
 
                 for (int i = 0; i < dataGridView1.Rows.Count; i++)
                 {
                     DataGridViewLinkCell linkCell = new DataGridViewLinkCell();
 
-                    dataGridView1[8, i] = linkCell;
+                    dataGridView1[10, i] = linkCell;
                 }
                 connection.Close();
             }
